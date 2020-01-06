@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "636078750897",
+    "firebase_url": "https://diagnoalz.firebaseio.com",
+    "project_id": "diagnoalz",
+    "storage_bucket": "diagnoalz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636078750897:android:23d12b954dfdb7f448f690",
+        "android_client_info": {
+          "package_name": "com.example.diagnoalz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636078750897-mqme7867g6upee3cf9ov97ehjltut29n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDj9e4FEr13ycOj8yusgdH4u4NU_INxIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636078750897-mqme7867g6upee3cf9ov97ehjltut29n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
