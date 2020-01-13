@@ -2,7 +2,6 @@
     <string name="app_name">DiagnoAlz</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
@@ -13,4 +12,9 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="nav_header_title">User</string>
+    <string name="test">Test</string>
+    <string name="menu_results">Results</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="gametest_frag_heading">First let us gather some information about you.</string>
 </resources>

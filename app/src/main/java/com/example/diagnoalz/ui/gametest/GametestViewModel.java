@@ -1,14 +1,13 @@
-package com.example.diagnoalz.ui.home;
+package com.example.diagnoalz.ui.gametest;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
-
+public class GametestViewModel extends ViewModel {
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public GametestViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("Welcome To DiagnoAlz");
     }
