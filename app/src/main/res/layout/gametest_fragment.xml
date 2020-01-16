@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/name_editText"
+        android:id="@+id/name_edittext"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginTop="90dp"
@@ -55,7 +55,7 @@
         android:textCursorDrawable="@drawable/color_cursor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_editText" />
+        app:layout_constraintTop_toBottomOf="@+id/name_edittext" />
 
     <EditText
         android:id="@+id/email_editText"

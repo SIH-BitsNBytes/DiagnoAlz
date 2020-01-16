@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment {
         });
 
         Button testBtn= (Button)root.findViewById(R.id.start_btn);
+
         testBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

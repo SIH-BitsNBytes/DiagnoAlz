@@ -1,7 +1,6 @@
 package com.example.diagnoalz;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,42 +12,20 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("memo");
+
+    public FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public DatabaseReference myRef = database.getReference("AllUsers");
+    public int users=0;
     private AppBarConfiguration mAppBarConfiguration;
-    private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         // Write a message to the database
-
-
-        myRef.setValue("Hello, World! app created by MANAN KARANI");
-
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d(TAG, "Value of message is: " + value);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-
 
 
         super.onCreate(savedInstanceState);
@@ -62,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_test, R.id.nav_results,
+                R.id.nav_home, R.id.nav_howtoplay, R.id.nav_results,
                 R.id.nav_aboutus, R.id.nav_share, R.id.nav_send)
                 .setDrawerLayout(drawer)
                 .build();
