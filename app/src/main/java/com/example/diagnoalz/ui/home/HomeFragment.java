@@ -1,5 +1,7 @@
 package com.example.diagnoalz.ui.home;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,17 +12,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.diagnoalz.R;
-import com.example.diagnoalz.ui.gametest.GametestFragment;
+import com.example.diagnoalz.ui.login.LoginActivity;
 
 public class HomeFragment extends Fragment {
-
     private HomeViewModel homeViewModel;
-
+    Context context;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -42,9 +42,12 @@ public class HomeFragment extends Fragment {
         testBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GametestFragment testFrag=new GametestFragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().replace(R.id.nav_host_fragment, testFrag, testFrag.getTag()).commit();
+                //Question1Fragment testFrag=new Question1Fragment();
+                //FragmentManager manager = getFragmentManager();
+                //manager.beginTransaction().replace(R.id.nav_host_fragment, testFrag, testFrag.getTag()).commit();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+
             }
         });
         return root;
