@@ -1,5 +1,6 @@
 package com.example.diagnoalz.ui.gametest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import com.example.diagnoalz.MainActivity;
 import com.example.diagnoalz.R;
 import com.example.diagnoalz.ui.Questions.Question1Fragment;
+import com.example.diagnoalz.ui.UserInfo;
 
 public class GametestFragment extends Fragment {
 
@@ -79,9 +81,26 @@ public class GametestFragment extends Fragment {
                     String userId = Integer.toString(mainact.users);
                     User user = new User(name.getText().toString(), age.getText().toString(), email.getText().toString(), mobile.getText().toString());
                     mainact.myRef.child(userId).setValue(user);
-                    Question1Fragment testFrag = new Question1Fragment();
+
+
+                    Bundle bundle=new Bundle();
+                    bundle.putString("name", userName);
+                    bundle.putString("age", userAge);
+                    bundle.putString("email", userEmail);
+                    bundle.putString("mobile", userMobile);
+
+                    UserInfo testFrag = new UserInfo();
+
+                    testFrag.setArguments(bundle);
                     FragmentManager manager = getFragmentManager();
+
                     manager.beginTransaction().replace(R.id.nav_host_fragment, testFrag, testFrag.getTag()).commit();
+
+//                    Question1Fragment testFrag = new Question1Fragment();
+//                    FragmentManager manager = getFragmentManager();
+//                    manager.beginTransaction().replace(R.id.nav_host_fragment, testFrag, testFrag.getTag()).commit();
+
+
                 }
             }
         });
